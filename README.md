@@ -11,6 +11,20 @@ Easily run bitcoind + Fulcrum via Docker Compose
 - Faster/potentially more reliable wallet sync than using centralized servers, especially over clearnet
 - Run in one place (home, VPS, etc.), connect many wallets/apps
 
+## Why Docker?
+
+### Pros
+
+- Greatly simplifies installation
+- Greatly simplifies updates
+- Automatically runs on boot and restarts if a simple issue happens
+- Makes the install much more portable across OSs and Linux distros
+
+### Cons
+
+- Introduces trust in the Docker image maintainers
+- Introduces trust in Docker Hub (the hosting platform for most Docker images)
+
 ## Requirements
 
 As of writing, the following requirements apply:
