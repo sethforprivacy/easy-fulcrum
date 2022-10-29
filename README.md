@@ -15,6 +15,7 @@ Easily run bitcoind + Fulcrum via Docker Compose
 
 As of writing, the following requirements apply:
 
+- This assumes Linux, YMMV on another OS but Docker is very portable.
 - CPU: The more the merrier, but can run with low end hardware
 - RAM: The more the merrier, but can run with low end hardware (if lower than 8GB you will need to remove dbcache and Fulcrum memory variables!)
 - Disk: Fast disk is *very* important, you should only run this on an SSD minimum, NVMe drive recommended
@@ -22,6 +23,8 @@ As of writing, the following requirements apply:
     - bitcoind: `500GB`
     - Fulcrum: `120GB`
   - Recommended free space: `750GB+`
+- Docker installed: https://docs.docker.com/engine/install/
+- Docker Compose plugin installed: https://docs.docker.com/compose/install/
 
 ## Setup
 
