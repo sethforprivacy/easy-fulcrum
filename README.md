@@ -40,7 +40,7 @@ As of writing, the following requirements apply:
 - Docker installed: https://docs.docker.com/engine/install/
 - Docker Compose plugin installed: https://docs.docker.com/compose/install/
 
-## Setup
+## Setup and configuration
 
 ### Required
 
