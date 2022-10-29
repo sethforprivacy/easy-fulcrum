@@ -25,9 +25,16 @@ As of writing, the following requirements apply:
 
 ## Setup
 
+### Required
+
 - `git clone https://github.com/sethforprivacy/easy-fulcrum.git && cd easy-fulcrum`
 - Configure RPC auth/user/password in the `.env` file
   - Be sure to change the default options, as they are insecure!
+  - Choose a username and generate a secure password
+  - Generate the `RPC_AUTH` value with https://github.com/jlopp/bitcoin-core-rpc-auth-generator
+  
+### Optional
+
 - Increase Fulcrum memory variable if you can afford to give it more than 2GB of RAM during initial sync
   - The more you give it here the faster initial sync will be, and this RAM is *only* allocated during initial sync
 - Increase bitcoin dbcache variable in `bitcoin.conf` if you can afford to give it more than 2GB of RAM
@@ -60,4 +67,4 @@ Note: if you need bitcoind RPC for other apps or tools, you can expose it by rem
 
 - @kylemanna for the excellent bitcoin Docker image: https://github.com/kylemanna/docker-bitcoind
 - @cculianu for the incredible Fulcrum: https://github.com/cculianu/Fulcrum
-- @jlopp for the awesome Bitcoin config and rpcauth generators
+- @jlopp for the awesome Bitcoin config and rpcauth generators: https://github.com/jlopp/bitcoin-core-rpc-auth-generator
