@@ -63,7 +63,7 @@ Note: if you need bitcoind RPC for other apps or tools, you can expose it by rem
 - If you're outside of the network, first forward port `50002` (if needed) to Fulcrum and then connect using the hosts external (internet-facing) IP address plus the port you exposed (normally also `50002`)
   - i.e. for Envoy, use `ssl://my.home.dns:50002` and for Sparrow use `my.home.dns`, set port to `50002`, and check "Use SSL"
 
-## Credit
+## Credits
 
 - @kylemanna for the excellent bitcoin Docker image: https://github.com/kylemanna/docker-bitcoind
 - @cculianu for the incredible Fulcrum: https://github.com/cculianu/Fulcrum
