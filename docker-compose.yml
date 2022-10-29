@@ -1,0 +1,29 @@
+version: '3.5'
+services:
+  bitcoind:
+    image: kylemanna/bitcoind:latest
+    restart: unless-stopped
+    container_name: bitcoind
+    volumes:
+      - bitcoind-data:/bitcoin/.bitcoin
+      - ./bitcoin.conf:/bitcoin/.bitcoin/bitcoin.conf
+    environment:
+      - 'RPCAUTH=${RPC_AUTH}'
+    ports:
+      - 127.0.0.1:8332:8332
+      - 8333:8333
+
+  fulcrum:
+    container_name: fulcrum
+    image: cculianu/fulcrum:latest
+    restart: unless-stopped
+    command: Fulcrum --ssl 0.0.0.0:50002 --tcp 0.0.0.0:50001 --bitcoind bitcoind:8332 --rpcuser ${RPC_USER} --rpcpassword ${RPC_PASSWORD} --fast-sync ${FULCRUM_MEM}
+    volumes:
+      - fulcrum-data:/data
+    ports:
+      - 127.0.0.1:50001:50001
+      - 50002:50002
+
+volumes:
+  bitcoind-data:
+  fulcrum-data:
