@@ -48,7 +48,7 @@ As of writing, the following requirements apply:
 - Configure RPC auth/user/password in the `.env` file
   - Be sure to change the default options, as they are insecure!
   - Choose a username and generate a secure password
-  - Generate the `RPC_AUTH` value with https://github.com/jlopp/bitcoin-core-rpc-auth-generator
+  - Generate the `RPC_AUTH` value with https://jlopp.github.io/bitcoin-core-rpc-auth-generator/
   
 ### Optional
 
