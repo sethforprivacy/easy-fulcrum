@@ -1,7 +1,6 @@
-version: '3.5'
 services:
   bitcoind:
-    image: sethsimmons/bitcoind:latest
+    image: ghcr.io/sethforprivacy/bitcoind:latest
     restart: unless-stopped
     container_name: bitcoind
     volumes:
